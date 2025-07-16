@@ -27,12 +27,12 @@ export default {
     const url = new URL(request.url);
     const pathname = url.pathname;
 
-    // 提取 Cloudflare Access 注入的头
+    // extract Cloudflare Access injected header
     const email = request.headers.get("cf-access-authenticated-user-email");
     const country = request.headers.get("cf-ipcountry");
     const now = new Date().toISOString();
 
-    // 如果是 /secure/${COUNTRY}
+    // if /secure/${COUNTRY}
     if (pathname.startsWith("/secure/") && pathname !== "/secure") {
       const countryCode = pathname.split("/")[2].toUpperCase();
 
@@ -52,7 +52,7 @@ export default {
       }
     }
 
-    // 默认 /secure 页面
+    // default /secure page
     if (pathname === "/secure") {
       if (!email) {
         return new Response("Unauthorized", { status: 401 });
