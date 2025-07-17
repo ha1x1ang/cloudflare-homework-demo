@@ -1,0 +1,11 @@
+name = "landing-page"
+type = "javascript"
+main = "src/index.js"
+
+compatibility_date = "2025-07-16"
+
+routes = ["tunnel.ha1x1angwebsite.com/landing*"]
+zone_id = "004d808ea928375457ed1187c4a4b5fb"
+account_id = "866d63dcfa1bd6d3c136f1a5cfb1b411"
+
+
