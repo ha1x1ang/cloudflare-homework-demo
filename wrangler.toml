@@ -2,8 +2,17 @@ name = "my-worker"
 main = "src/index.ts"
 compatibility_date = "2025-07-16"
 
-routes = ["tunnel.ha1x1angwebsite.com/secure*"]
-zone_id = "004d808ea928375457ed1187c4a4b5fb"
+#routes = ["cfhomework.hxn-cf.com/secure*"]
+routes = [
+  "https://cfhomework.hxn-cf.com/secure*",
+  "https://tunnel.hxn-cf.com/secure*",
+  "https://www.hxn-cf.com/secure*",
+  "https://tunnel.hxn-cf.com/login*",
+  "https://cfhomework.hxn-cf.com/login*",
+  "https://www.hxn-cf.com/login*"
+]
+
+zone_id = "3f1534c91a608a452bde151a8d83bd8f"
 
 [[r2_buckets]]
 binding = "FLAGS_BUCKET"
